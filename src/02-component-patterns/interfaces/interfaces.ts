@@ -24,3 +24,13 @@ export interface ProductCardHOCProps{
 
 
 }
+
+
+export interface OnChangeArg{
+    product:Product, 
+    count:number
+}
+
+export interface ProductInCart extends Product {
+    count: number;
+  }
