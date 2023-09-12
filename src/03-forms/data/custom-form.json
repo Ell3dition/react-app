@@ -1,0 +1,62 @@
+[
+    {
+        "type":"input",
+        "name":"firstname",
+        "placeholdder":"Marcos",
+        "label":"First Name",
+        "value":"Marcos",
+        "validation":[
+            {
+                "type": "required"
+            },
+            {
+                "type": "minLength",
+                "value":5
+
+            }
+        ]
+    },
+    {
+        "type":"input",
+        "name":"lastname",
+        "placeholdder":"Jara",
+        "label":"Last Name",
+        "value":"Jara",
+        "validation":[
+            {
+                "type": "required"
+            }
+        ]
+    },
+    {
+        "type":"email",
+        "name":"email",
+        "placeholdder":"marcos@correo.cl",
+        "label":"Email",
+        "value":"",
+        "validation":[
+            {
+                "type": "required"
+            },
+            {
+                "type": "email"
+            }
+        ]
+    },
+    {
+        "type":"select",
+        "name":"favoriteGame",
+        "label":"favorite Game",
+        "value":"",
+        "options":[
+                {"id":"1", "label":"Super Smash"},
+                {"id":"2", "label":"Resident Evil"},
+                {"id":"3", "label":"Mario Bros"}
+            ],
+        "validation":[
+            {
+                "type": "required"
+            }
+        ]
+    }
+]

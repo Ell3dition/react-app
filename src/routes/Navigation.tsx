@@ -2,7 +2,16 @@ import { BrowserRouter } from 'react-router-dom';
 import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
 
 import logo from '../logo.svg'
-import { FormikAbstractions, FormikBasicPage, FormikComponents, FormikYupPage, Registerpage } from '../03-forms/pages';
+import { 
+    DynamicForm,
+    FormikAbstractions, 
+    FormikBasicPage, 
+    FormikComponents, 
+    FormikYupPage, 
+    RegisterFormikPage, 
+    Registerpage,
+
+} from '../03-forms/pages';
 
 
 export const Navigation = () => {
@@ -28,7 +37,10 @@ export const Navigation = () => {
                             <NavLink to="/formik-abstractions" className={ ({ isActive }) => isActive ? 'nav-active' : '' }>formik Abstractations</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/users" className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Users</NavLink>
+                            <NavLink to="/formik-register" className={ ({ isActive }) => isActive ? 'nav-active' : '' }>formik register</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/dynamic-form" className={ ({ isActive }) => isActive ? 'nav-active' : '' }>Dynamic Form</NavLink>
                         </li>
                     </ul>
                 </nav>
@@ -39,8 +51,9 @@ export const Navigation = () => {
                     <Route path="formik-yup" element={ <FormikYupPage/>} />
                     <Route path="formik-component" element={ <FormikComponents/>} />
                     <Route path="formik-abstractions" element={ <FormikAbstractions/>} />
-                    <Route path="users" element={ <h1>Users Page</h1> } />
+                    <Route path="dynamic-form" element={ <DynamicForm /> } />
                     <Route path="register" element={ <Registerpage/>} />
+                    <Route path="formik-register" element={ <RegisterFormikPage/>} />
                     
                     <Route path="/*" element={ <Navigate to="/home" replace /> } />
                 </Routes>
